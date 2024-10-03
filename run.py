@@ -50,5 +50,16 @@ def validate_data(values):
         return False
 
     return True
-    
+
+def update_attendance_worksheet(data):
+    """
+    update attendance worksheet, add new row with data the user inputted
+    """
+    print("Updating sales worksheet\n")
+    attendance_worksheet = SHEET.worksheet("attendance")
+    attendance_worksheet.append_row(data)
+    print("attendance worksheet updated successfully.\n")
+
 data = get_attendance_data()
+attendance_data = [int(num) for num in data]
+update_attendance_worksheet(attendance_data)
