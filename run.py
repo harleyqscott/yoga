@@ -14,9 +14,15 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('yoga')
 
-attendance = SHEET.worksheet('attendance')
+def get_attendance_data():
+    """
+    Get attendance numbers from the users
+    """
+print("Please enter attendance data from the last market.")
+print("Data should be six numbers, seperated by commas.")
+print("Example: 1, 2, 3, 4, 5, 6\n")
 
-data = attendance.get_all_values()
+data_str = input("Enter your data here: ")
+print(f"The data provided is {data_str}")
 
-print(data)
-
+get_attendance_data()
