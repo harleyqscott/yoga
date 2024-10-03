@@ -18,15 +18,20 @@ def get_attendance_data():
     """
     Get attendance numbers from the users
     """
-    print("Please enter attendance data from the last market.")
-    print("Data should be six numbers, seperated by commas.")
-    print("Example: 1, 2, 3, 4, 5, 6\n")
+    while True:
+        print("Please enter attendance data from the last market.")
+        print("Data should be six numbers, seperated by commas.")
+        print("Example: 1, 2, 3, 4, 5, 6\n")
 
-    data_str = input("Enter your data here: ")
+        data_str = input("Enter your data here: ")
     
-    attendance_data = data_str.split(",")
-    validate_data(attendance_data)
+        attendance_data = data_str.split(",")
+        
+        if validate_data(attendance_data):
+            print("Data is valid!")
+            break
 
+    return attendance_data
 
 def validate_data(values):
     """
@@ -42,6 +47,8 @@ def validate_data(values):
             )
     except ValueError as e:
         print(f"Data is invalid: {e}, please try again.\n")
+        return False
 
-
-get_attendance_data()
+    return True
+    
+data = get_attendance_data()
