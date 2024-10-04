@@ -1,6 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
-
+from pprint import pprint
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -58,7 +58,18 @@ def update_attendance_worksheet(data):
     print("Updating sales worksheet\n")
     attendance_worksheet = SHEET.worksheet("attendance")
     attendance_worksheet.append_row(data)
-    print("attendance worksheet updated successfully.\n")
+    print("Attendance worksheet updated successfully.\n")
+
+
+def calculate_placesLeft_data(attendance_row):
+    """
+    Compare attendance with placesAvailable and calculate the placesLeft for each yoga type.
+    The placesLeft is defined as the attendance figure subtracted from the placesAvaliable.
+    """
+    print("Calculating placesLeft data...\n")
+    placesAvailable = SHEET.worksheet("placesAvaliable").get_all_values()
+    pprint(placesAvailable)
+
 
 def main():
     """
@@ -67,6 +78,7 @@ def main():
     data = get_attendance_data()
     attendance_data = [int(num) for num in data]
     update_attendance_worksheet(attendance_data)
+    calculate_placesLeft_data(attendance_data)
 
 
 print("Welcome to yoga data automation")
