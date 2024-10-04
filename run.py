@@ -55,7 +55,7 @@ def update_attendance_worksheet(data):
     """
     update attendance worksheet, add new row with data the user inputted
     """
-    print("Updating sales worksheet\n")
+    print("Updating attendance worksheet\n")
     attendance_worksheet = SHEET.worksheet("attendance")
     attendance_worksheet.append_row(data)
     print("Attendance worksheet updated successfully.\n")
@@ -67,9 +67,9 @@ def calculate_placesLeft_data(attendance_row):
     The placesLeft is defined as the attendance figure subtracted from the placesAvaliable.
     """
     print("Calculating placesLeft data...\n")
-    placesAvailable = SHEET.worksheet("placesAvaliable").get_all_values()
-    pprint(placesAvailable)
-
+    placesAvailable = SHEET.worksheet("placesAvailable").get_all_values()
+    placesAvailable_row = placesAvailable[-1]
+    print(placesAvailable_row)
 
 def main():
     """
