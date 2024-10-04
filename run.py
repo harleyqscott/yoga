@@ -60,6 +60,14 @@ def update_attendance_worksheet(data):
     attendance_worksheet.append_row(data)
     print("attendance worksheet updated successfully.\n")
 
-data = get_attendance_data()
-attendance_data = [int(num) for num in data]
-update_attendance_worksheet(attendance_data)
+def main():
+    """
+    Run all program functions
+    """
+    data = get_attendance_data()
+    attendance_data = [int(num) for num in data]
+    update_attendance_worksheet(attendance_data)
+
+
+print("Welcome to yoga data automation")
+main()
