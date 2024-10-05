@@ -83,5 +83,5 @@ def main():
     calculate_placesLeft_data(attendance_data)
 
 
-print("Welcome to yoga data automation")
+print("Welcome to Yoga Data Automation")
 main()
