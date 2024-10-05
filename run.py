@@ -70,8 +70,13 @@ def calculate_placesLeft_data(attendance_row):
     print("Calculating placesLeft data...\n")
     placesAvailable = SHEET.worksheet("placesAvailable").get_all_values()
     placesAvailable_row = placesAvailable[-1]
-    print(f"placesAvailable row: {placesAvailable_row}")
-    print(f"attendance row: {attendance_row}")
+    
+    placesLeft_data = []
+    for placesAvailable, attendance in zip(placesAvailable_row, attendance_row):
+        placesLeft = int(placesAvailable) - attendance
+        placesLeft_data.append(placesLeft)
+    
+    return placesLeft_data
 
 def main():
     """
@@ -80,7 +85,8 @@ def main():
     data = get_attendance_data()
     attendance_data = [int(num) for num in data]
     update_attendance_worksheet(attendance_data)
-    calculate_placesLeft_data(attendance_data)
+    new_placesLeft_data = calculate_placesLeft_data(attendance_data)
+    print(new_placesLeft_data)
 
 
 print("Welcome to Yoga Data Automation")
