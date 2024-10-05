@@ -2,6 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from pprint import pprint
 
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -69,7 +70,8 @@ def calculate_placesLeft_data(attendance_row):
     print("Calculating placesLeft data...\n")
     placesAvailable = SHEET.worksheet("placesAvailable").get_all_values()
     placesAvailable_row = placesAvailable[-1]
-    print(placesAvailable_row)
+    print(f"placesAvailable row: {placesAvailable_row}")
+    print(f"attendance row: {attendance_row}")
 
 def main():
     """
