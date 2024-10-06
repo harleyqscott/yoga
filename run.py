@@ -61,6 +61,14 @@ def update_attendance_worksheet(data):
     attendance_worksheet.append_row(data)
     print("Attendance worksheet updated successfully.\n")
 
+def update_placesLeft_worksheet(data):
+    """
+    update placesLeft worksheet, add new row with data the user inputted
+    """
+    print("Updating placesleft worksheet\n")
+    placesLeft_worksheet = SHEET.worksheet("placesLeft")
+    placesLeft_worksheet.append_row(data)
+    print("placesLeft worksheet updated successfully.\n")
 
 def calculate_placesLeft_data(attendance_row):
     """
@@ -86,7 +94,7 @@ def main():
     attendance_data = [int(num) for num in data]
     update_attendance_worksheet(attendance_data)
     new_placesLeft_data = calculate_placesLeft_data(attendance_data)
-    print(new_placesLeft_data)
+    update_placesLeft_worksheet(new_placesLeft_data)
 
 
 print("Welcome to Yoga Data Automation")
