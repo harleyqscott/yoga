@@ -1,8 +1,7 @@
 # Yoga
 
-
 ## Introduction
-
+I built this program to collect input from user and use that data to calculate the average places I should have in the next market of yoga sessions. To do this, i first had to request the attendance data from the user, then calculate the placesleft data finally calculate the placesAvailable data bases on the averages from the last 5 market enries.
 
 ### Google sheets
 The sheets are separated into three separate worksheets, attendance, placesAvailable and placesLeft.<br>
@@ -33,9 +32,11 @@ Try except statement- The except statement will print an error to the terminal i
 
 
 ### why I used
-commented out section and code under it- I commeneted out two specific functions in my code since underneath i wrote a speice of code that combined the two to make it more concise.<br>
+commented out section and code under it- I commeneted out two specific functions in my code since underneath i refactored the two speices of code that combined the two to make it more concise.<br>
 
-range (my code example-(1, 7))<br>
+range() (my code example-(1, 7))- I used range in my code to loop through the data six times, 1 through 7. This range was used to access one of the six yoga types. <br>
+
+_row & .col- col stasnds for column. .col is used when you want to access a column. _row was used in my code to access a row.
 
 split() method- This method returns the broken up values as a list. I used split(",") to remove the commas from my list of numbers.<br>
 
@@ -51,7 +52,7 @@ f strings(f"")- These provide a concise and intuative way to embed expressions a
 
 SHEET.worksheet- The sheet variable is used by implemeting the gspread library. This links to my google sheets so that i can push and pull data from it. using SHEET.worksheet lets the worksheet know that we want to pull data from it. <br>
 
-zip- The zip method allows you to loop through two different lists at the same time.<br>
+zip- The zip method allows you to iterate through two iterable lists at the same time. In terms of my code, interate through the placesAvailable and attendance list to get the placesLeft data.<br>
 
 new line character(\n)- \n is used to create an extra space between lines this helps with readability. <br>
 
@@ -61,11 +62,13 @@ pprint()- PPrint needs to be imported before using, this goes at the top of the 
 
 
 ### Flowchart
-demonstrates how the system should work in words
+demonstrates how the system should work in words<br>
+![flowchart p3yoga.pdf](https://github.com/user-attachments/files/17269753/flowchart.p3.yoga.pdf)
+
 
 
 ### End goal
-gather user input and calculate averages for places in future sessions. do this by calculating how many attended and how many places were left.
+my end goal  for this project is to gather user input and calculate averages for places in future sessions. This is accomplished by calculating how many attended and how many places were left.
 
 ### Future goals
-In the future i would like to incorperate images so users can usually see how many spaces are left. 
+In the future I would like to incorperate images so users can usually see how many spaces are left. 
