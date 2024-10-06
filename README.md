@@ -63,7 +63,8 @@ pprint()- PPrint needs to be imported before using, this goes at the top of the 
 
 ### Flowchart
 demonstrates how the system should work in words<br>
-![flowchart p3yoga.pdf](https://github.com/user-attachments/files/17269753/flowchart.p3.yoga.pdf)
+
+<img src="![image1](https://github.com/user-attachments/assets/7995cee4-3aac-4349-83d0-9f4a41841dd7)" width="600" height="400">
 
 
 
