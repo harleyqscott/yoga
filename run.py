@@ -97,6 +97,23 @@ def calculate_placesLeft_data(attendance_row):
     
     return placesLeft_data
 
+def get_last_5_entries_attendance():
+    """
+    collect the data (collums) of attendance worksheet, gathering the last 5 entries for each yoga session
+    and return the data as a list of lists. 
+    """
+    attendance = SHEET.worksheet("attendance")
+   
+
+    columns = []
+    for ind in range(1, 7):
+        column = attendance.col_values(ind)
+        columns.append(column[-5:])
+
+    return columns
+    
+
+
 def main():
     """
     Run all program functions
@@ -109,4 +126,6 @@ def main():
 
 
 print("Welcome to Yoga Data Automation")
-main()
+#main()
+
+attendance_columns = get_last_5_entries_attendance()
