@@ -17,24 +17,47 @@ The sheets are separated into three separate worksheets, attendance, placesAvail
 
 
 ### How each part works
-loops<br>
-return<br>
-different defined functions<br>
-print statements<br>
+loops- While loops for example are used to execute a block of code repeatedly as long as a given condition is met. If the condiditon is not met, the block of code will keep repeating. I used this to loop through my code so that when a user inputs their data if it isn't valid then it will ask them to repeat and try again.  <br>
+
+break- Break is used to end a loop once its requirments are met.<br>
+
+return- Return can be used to return whether the statement is true or false for example is the requirements are met return true. Also if an error is thrown in the statement then you can use return to return false. Return can also be used to return a specific set of data. <br>
+
+different defined functions- Functions are building block in python that enable you to organise and reuse code. They can be used for carrying out certain tasks. They are used to accept or not accept an input.<br>
+
+print statements- print statements are used to print messages into the terminal. They can also be used to check you code is working how you want it to, if it works then you can remove it. Can also be used toi give feed back in the terminal. <br>
+
+calling a function(my code example-get_attendance_data())- in python you cannot call a function above the function. A function is called to execute its code. <br>
+
+Try except statement- The except statement will print an error to the terminal if the try statement doesnt work. Within the try statement can go an if statement which you use to determine the next move within the code for example IF the number is correct then do this<br>
 
 
 ### why I used
-commented out section and code under it<br>
-range 1, 7<br>
-split<br>
-len<br>
-raise ValueError<br>
-f""<br>
-.append<br>
-SHEET.worksheet<br>
-zip<br>
-\n<br>
+commented out section and code under it- I commeneted out two specific functions in my code since underneath i wrote a speice of code that combined the two to make it more concise.<br>
 
+range (my code example-(1, 7))<br>
+
+split() method- This method returns the broken up values as a list. I used split(",") to remove the commas from my list of numbers.<br>
+
+int - Int is short for integer. You would use int when you want to convert a value into an integer for example a string. You can't do mathmatical equations with an integer and a string therefore you need to convert the string into an integer.
+
+len()- This is used to check how many values are in a list. It will return the number of values in it. <br>
+
+raise ValueError- This is used to write your own error message, you can use an f statement to write the message (f"") <br>
+
+f strings(f"")- These provide a concise and intuative way to embed expressions and variables directly into strings.<br>
+
+.append- the append method is used to add something. for example in my code, i used append_row which adds a new row to my spreadsheet. <br>
+
+SHEET.worksheet- The sheet variable is used by implemeting the gspread library. This links to my google sheets so that i can push and pull data from it. using SHEET.worksheet lets the worksheet know that we want to pull data from it. <br>
+
+zip- The zip method allows you to loop through two different lists at the same time.<br>
+
+new line character(\n)- \n is used to create an extra space between lines this helps with readability. <br>
+
+docstring- a docstring consists of tripple double quotes split in half with two vertical spaces between them e.g """""". Inbetween these quotes is information describing what the function does. They are used to tell other developers what the function does and why its there. They shopuld always be right under the function name in the function.<br>
+
+pprint()- PPrint needs to be imported before using, this goes at the top of the code(from pprint import pprint). it formats the structure in a way that is easier to read.
 
 
 ### Flowchart
@@ -44,3 +67,5 @@ demonstrates how the system should work in words
 ### End goal
 gather user input and calculate averages for places in future sessions. do this by calculating how many attended and how many places were left.
 
+### Future goals
+In the future i would like to incorperate images so users can usually see how many spaces are left. 
