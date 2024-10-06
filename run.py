@@ -52,23 +52,34 @@ def validate_data(values):
 
     return True
 
-def update_attendance_worksheet(data):
-    """
-    update attendance worksheet, add new row with data the user inputted
-    """
-    print("Updating attendance worksheet\n")
-    attendance_worksheet = SHEET.worksheet("attendance")
-    attendance_worksheet.append_row(data)
-    print("Attendance worksheet updated successfully.\n")
+#def update_attendance_worksheet(data):
+  #  """
+  #  Update attendance worksheet, add new row with the list data provided
+  #  """
+  #  print("Updating attendance worksheet...\n")
+  #  attendance_worksheet = SHEET.worksheet("attendance")
+  #  attendance_worksheet.append_row(data)
+  #  print("Attendance worksheet updated successfully.\n")
 
-def update_placesLeft_worksheet(data):
+
+#def update_placesLeft_worksheet(data):
+  #  """
+  #  Update placesLeft worksheet, add new row with the list data provided
+  #  """
+  #  print("Updating placesLeft worksheet...\n")
+  #  placesLeft_worksheet = SHEET.worksheet("placesLeft")
+  # placesLeft_worksheet.append_row(data)
+  # print("placesLeft worksheet updated successfully.\n")
+
+def update_worksheet(data, worksheet):
     """
-    update placesLeft worksheet, add new row with data the user inputted
+    Recieves a list of user inserted integers to be inserted onto the worksheet.
+    Then update particular worksheet
     """
-    print("Updating placesleft worksheet\n")
-    placesLeft_worksheet = SHEET.worksheet("placesLeft")
-    placesLeft_worksheet.append_row(data)
-    print("placesLeft worksheet updated successfully.\n")
+    print(f"Updating {worksheet} worksheet\n")
+    worksheet_to_update = SHEET.worksheet(worksheet)
+    worksheet_to_update.append_row(data)
+    print(f"{worksheet} worksheet updated successfully\n")
 
 def calculate_placesLeft_data(attendance_row):
     """
@@ -92,9 +103,9 @@ def main():
     """
     data = get_attendance_data()
     attendance_data = [int(num) for num in data]
-    update_attendance_worksheet(attendance_data)
+    update_worksheet(attendance_data, "attendance" )
     new_placesLeft_data = calculate_placesLeft_data(attendance_data)
-    update_placesLeft_worksheet(new_placesLeft_data)
+    update_worksheet(new_placesLeft_data, "placesLeft")
 
 
 print("Welcome to Yoga Data Automation")
