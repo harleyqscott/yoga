@@ -1,32 +1,38 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Yoga 
 
-Welcome,
+## Introduction
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
+### Google sheets
+The sheets are seperated into three seperate worksheets, attendance, placesAvailable and placesLeft.
+![2024-10-06](https://github.com/user-attachments/assets/316b38c9-4a6c-415d-ae09-900af7b004a7)
+<br>Attendance worksheet image<br>
+![2024-10-06(1)](https://github.com/user-attachments/assets/471e9f73-8fb6-4490-8c99-d6c288c925a8)
+<br>placesAvailble worksheet image<br>
+![2024-10-06(2)](https://github.com/user-attachments/assets/dcabfd5c-c6cb-46fc-9631-c3e5e66ded30)
+<br>placesLeft worksheet image<br>
 
-## Reminders
+### How each part works
+loops<br>
+return<br>
+different defined functions<br>
+print statements<br>
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+### why I used 
+commented out section and code under it<br>
+range 1, 7<br>
+split<br>
+len<br>
+raise ValueError<br>
+f""<br>
+.append<br>
+SHEET.worksheet<br>
+zip<br>
+\n<br>
 
-## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### Flowchart
+demonstrates how the system should work in words
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+### End goal
+gather user input and calculate averages for places in furture sessions. do this by calculating how many attended and how many places were left.
