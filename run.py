@@ -112,6 +112,20 @@ def get_last_5_entries_attendance():
 
     return columns
     
+def calculate_placesAvailable_data(data):
+    """
+    calculate average places available for each yoga type
+    """
+    print("Calculating places available data...\n")
+    new_placesAvailable_data = []
+
+    for column in data:
+        int_column = [int (num) for num in column]
+        average = sum(int_column) / len(int_column)
+        placesAvailable_num = average * 1.1
+        new_placesAvailable_data.append(round(placesAvailable_num))
+    
+    return new_placesAvailable_data
 
 
 def main():
@@ -123,9 +137,11 @@ def main():
     update_worksheet(attendance_data, "attendance" )
     new_placesLeft_data = calculate_placesLeft_data(attendance_data)
     update_worksheet(new_placesLeft_data, "placesLeft")
+    attendance_columns = get_last_5_entries_attendance()
+    placesAvailable_data = calculate_placesAvailable_data(attendance_columns)
+    update_worksheet(placesAvailable_data, "placesAvailable")
 
 
 print("Welcome to Yoga Data Automation")
-#main()
+main()
 
-attendance_columns = get_last_5_entries_attendance()
