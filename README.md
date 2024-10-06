@@ -5,7 +5,7 @@
 
 
 ### Google sheets
-The sheets are separated into three separate worksheets, attendance, placesAvailable and placesLeft.
+The sheets are separated into three separate worksheets, attendance, placesAvailable and placesLeft.<br>
 ![2024-10-06](https://github.com/user-attachments/assets/316b38c9-4a6c-415d-ae09-900af7b004a7)
 <br>Attendance worksheet image<br>
 ![2024-10-06(1)](https://github.com/user-attachments/assets/471e9f73-8fb6-4490-8c99-d6c288c925a8)
