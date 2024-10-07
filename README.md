@@ -71,4 +71,4 @@ Demonstrates how the system should work in words<br>
 My end goal for this project is to gather user input and calculate averages for places in future sessions. This is accomplished by calculating how many attended and how many places were left.
 
 ### Future goals
-In the future I would like to add more functions to calculate which is the most popular sessions and take feedback from users to see what other types of yoga they'd like to take part in. 
+In the future I would like to add more functions to calculate which are the most popular sessions and take feedback from users to see what other types of yoga they'd like to take part in. 
