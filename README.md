@@ -67,7 +67,6 @@ demonstrates how the system should work in words<br>
 <img src="![image1](https://github.com/user-attachments/assets/7995cee4-3aac-4349-83d0-9f4a41841dd7)" width="600" height="400">
 
 
-
 ### End goal
 My end goal for this project is to gather user input and calculate averages for places in future sessions. This is accomplished by calculating how many attended and how many places were left.
 
