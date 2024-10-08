@@ -72,3 +72,6 @@ My end goal for this project is to gather user input and calculate averages for 
 
 ### Future goals
 In the future I would like to add more functions to calculate which are the most popular sessions and take feedback from users to see what other types of yoga they'd like to take part in. 
+
+### Credits<br>
+I gathered some information to build this of GeeksForGods, peps.python.org, wikipedia and Code Institute.
